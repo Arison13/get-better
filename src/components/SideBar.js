@@ -32,7 +32,7 @@ export default function SideBar() {
 
   return (
     <div>
-      <Form onSubmit={onSubmit}>
+      <Form onSubmit={onSubmit} >
         <Form.Group className="m-2" controlId="weight">
             <Form.Label className="d-block">Enter Your Weight</Form.Label>
             <Form.Control type="number" ref={weightRef} required/>
