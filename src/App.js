@@ -7,7 +7,6 @@ import Training from './components/Training';
 import WeightLoss from './components/WeightLoss';
 import Home from './components/Home';
 import { FiMenu, FiX } from "react-icons/fi";
-import {Button} from 'react-bootstrap';
 
 function App() {
   const[sidebar, setSidebar]= useState("")
@@ -47,8 +46,6 @@ function App() {
         <Switch> 
           <Route path='/training' component={Training} />
           <Route path='/weight-loss' component={WeightLoss} />
-          {/* <Route path='/home' component={Home} /> */}
-
           <Route path="/home">
             <Home showSide={onClick}/>
           </Route>

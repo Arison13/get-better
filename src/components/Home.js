@@ -12,7 +12,6 @@ export default function Home({showSide}) {
        <div className='d-flex justify-content-center align-items-center'>
         <Button onClick={showSide} variant="primary" className='m-2'> Calculate Your Calories</Button>
        </div>
-      
     </div>
   )
 }
