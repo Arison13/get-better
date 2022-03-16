@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 export default function Home({showSide}) {
 
   return (
-    <div className='home'>
+    <div className='home bg-dark text-light'>
        <p>is simply dummy text of the printing and typesetting industry.is simply dummy text of the printing 
          and typesetting industry. is simply dummy text of the printing and typesetting industry. is simply dummy text of the printing and typesetting industry.
        </p>
