@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Form } from 'react-bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/SideBar.css";
 import { useRef } from 'react';
 
@@ -32,38 +31,38 @@ export default function SideBar() {
 
   return (
     <div>
-      <Form onSubmit={onSubmit} >
-        <Form.Group className="m-2" controlId="weight">
-            <Form.Label className="d-block">Enter Your Weight</Form.Label>
-            <Form.Control type="number" ref={weightRef} required/>
-        </Form.Group>
+      <form onSubmit={onSubmit} >
+        <div className="form-group" controlid="weight">
+            <label>Enter Your Weight</label>
+            <input type="number" min={80} max={350} ref={weightRef} required/>
+        </div>
 
-        <Form.Group className="m-2" controlId="age">
-            <Form.Label>Enter Your Age</Form.Label>
-            <Form.Control type="number" ref={ageRef}  required/>
-        </Form.Group>
+        <div className="form-group" controlid="age">
+            <label>Enter Your Age</label>
+            <input type="number" min={1} max={80} ref={ageRef}  required/>
+        </div>
         
-        <Form.Group className="m-2" controlId="activityLevel">
-            <Form.Label>Choose Your Activity Level</Form.Label>
-            <Form.Select ref={activityLevelRef} defaultValue={0} required >
+        <div className="form-group" controlid="activityLevel">
+            <label>Choose Your Activity Level</label>
+            <select ref={activityLevelRef} defaultValue={0} required >
               <option value={1}>1</option>
               <option value={2}>2</option>
               <option value={3}>3</option>
               <option value={4}>4</option>
               <option value={5}>5</option>
-            </Form.Select>
-            <Form.Text className="text-muted"> From 1 to 5</Form.Text>
-        </Form.Group>
+            </select>
+            <p className="text-muted"> From 1 to 5</p>
+        </div>
         
-        <div className='d-flex justify-content-center align-items-center'>
-          <Button variant="primary" type="submit" >
+        <div className='btn'>
+          <button className="btn-sidebar" variant="primary" type="submit" >
               Calculate
-          </Button>
+          </button>
         </div>
       {
-        result && <Form.Text className="text"> Your Calorie Intake should be: {result} Cals </Form.Text>
+        result && <p className="text"> Your Calorie Intake should be: {result} Cals </p>
       }
-      </Form>
+      </form>
      </div>
   )
 }

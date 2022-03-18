@@ -32,7 +32,7 @@ function App() {
     <div className='app'>
       {/* SideBar Section */}
      
-      <div className={`sidebar ${sidebar}`}>
+      <div className={`sidebar ${sidebar} bg-dark text-light`}>
 
         {
           open &&

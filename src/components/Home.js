@@ -9,11 +9,11 @@ export default function Home({showSide}) {
        <p>is simply dummy text of the printing and typesetting industry.is simply dummy text of the printing 
          and typesetting industry. is simply dummy text of the printing and typesetting industry. is simply dummy text of the printing and typesetting industry.
        </p>
-       <div className='d-flex justify-content-center align-items-center'>
+       <div className='btn'>
         <Button onClick={showSide} variant="primary" className='mb-4'> Calculate Your Calories</Button>
        </div>
 
-       <div className='d-flex justify-content-around mb-4'>
+       <div className='d-flex justify-content-around align-items-center  mb-4'>
        <p className='w-25'>
           is simply dummy text of the printing and typesetting industry.
           is simply dummy text of the printing and typesetting industry.
@@ -23,7 +23,7 @@ export default function Home({showSide}) {
          &ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"/>
        </div>
 
-       <div className='d-flex justify-content-around mb-4'>
+       <div className='d-flex justify-content-around align-items-center mb-4'>
          <img className='w-25' alt="sample"
          src="https://images.unsplash.com/photo-1526401485004-46910ecc8e51?ixlib=rb-1.2.1
          &ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"/>

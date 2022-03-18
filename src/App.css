@@ -6,20 +6,20 @@
   width: 100%;
   display: flex;
   /* background-image: url("https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"); */
-  height: 100vh;
+  /* height: 100vh; */
 }
 .x {
   height:2rem;
   width:2rem;
   cursor: pointer;
-  transition: all ease-in-out .7s;
-  color: black;
+  transition: all ease-in-out .4s;
+  color: white;
   border-radius: 5px;
 }
 .x:hover{
-  color: white;
+  color: red;
   transform: rotate(-90deg);
-  background-color: black;
+  background-color: white;
 }
 
 .sidebar{
@@ -27,6 +27,7 @@
   position: fixed;
   transition: transform ease-in-out .5s;
   transform: translateX(100%);
+  background-color: rgb(7, 10, 34);
 }
 .sidebar-open{
   position: relative;
