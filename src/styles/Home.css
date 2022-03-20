@@ -1,8 +1,60 @@
 .home {
-    border: 1px solid red;
+    background-color: rgb(7, 10, 34);
+    color: white;
 }
-.btn{
+.main-landing{
+    height: 100vh;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+     /* background-image: ; */
+    /* Add picture for background here */
+}
+.landing-text{
+    box-shadow: 1px 1px 1px 1px white;
+    border-radius: 8px;
+    width: 50%;
+    margin-left: 25%;
+    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    padding: .75rem 1rem;
+    background-color: rgb(0, 149, 255);
+    border: none;
+    width: 10rem;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+    color: white;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px #ffff;
+    transition: all .3s ease-in;
+    cursor: pointer;
+}
+
+.home-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.home-text{
+    width: 40%;
+}
+
+img{
+    width: 25%;
+    height: 25%;
+    border-radius: 1rem;
 }

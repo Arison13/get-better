@@ -6,7 +6,7 @@ import {Switch, Route} from 'react-router-dom';
 import Training from './components/Training';
 import WeightLoss from './components/WeightLoss';
 import Home from './components/Home';
-import { FiMenu, FiX } from "react-icons/fi";
+import {FiX } from "react-icons/fi";
 
 function App() {
   const[sidebar, setSidebar]= useState("")
@@ -32,7 +32,7 @@ function App() {
     <div className='app'>
       {/* SideBar Section */}
      
-      <div className={`sidebar ${sidebar} bg-dark text-light`}>
+      <div className={`sidebar ${sidebar}`}>
 
         {
           open &&
@@ -49,7 +49,9 @@ function App() {
           <Route path="/home">
             <Home showSide={onClick}/>
           </Route>
-          <Route exact path='/' component={Home} />
+          <Route exact path='/'>
+            <Home showSide={onClick}/>
+          </Route>
         </Switch>  
     </div>
   </div>

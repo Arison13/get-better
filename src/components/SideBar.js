@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/SideBar.css";
 import { useRef } from 'react';
 
@@ -51,10 +50,10 @@ export default function SideBar() {
               <option value={4}>4</option>
               <option value={5}>5</option>
             </select>
-            <p className="text-muted"> From 1 to 5</p>
+            <p className="text"> From 1 to 5</p>
         </div>
         
-        <div className='btn'>
+        <div className='btn-div-sidebar'>
           <button className="btn-sidebar" variant="primary" type="submit" >
               Calculate
           </button>
@@ -64,6 +63,5 @@ export default function SideBar() {
       }
       </form>
      </div>
-     
   )
 }

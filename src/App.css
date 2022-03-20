@@ -23,7 +23,6 @@
 }
 
 .sidebar{
-  border: 1px solid red;
   position: fixed;
   transition: transform ease-in-out .5s;
   transform: translateX(100%);
