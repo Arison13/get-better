@@ -4,12 +4,19 @@
 }
 .main-landing{
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-self: center;
     flex-direction: column;
     justify-content: center;
-     /* background-image: ; */
-    /* Add picture for background here */
+    /* backdrop-filter: grayscale(20%); */
+    /* the backdrop applies to the background of wtv part
+    your working on, not to the elemtn itself  */
+    background-image:url("https://images.unsplash.com/photo-1579364046732-c21c2177730d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80") ;
+    background-position: center;
+    object-fit: contain;
+    /* background-repeat: no-repeat; */
+    /* border: 1px solid red; */
 }
 .landing-text{
     box-shadow: 1px 1px 1px 1px white;
@@ -20,12 +27,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    backdrop-filter: invert(40%);
 }
 
 .btn-div {
+    /* border: 1px solid red; */
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    /* width: 50%; */
 }
 
 .btn{
@@ -38,23 +48,20 @@
     color: white;
     font-weight: bold;
     box-shadow: 1px 1px 1px #ffff;
-    transition: all .3s ease-in;
+    transition: all .3s ease-in-out;
     cursor: pointer;
+    text-decoration: none;
 }
-
+.btn:hover {
+    background-color: rgb(0, 149, 255, .60);
+}
 .home-content{
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin-bottom: 1rem;
 }
-
 .home-text{
     width: 40%;
 }
 
-img{
-    width: 25%;
-    height: 25%;
-    border-radius: 1rem;
-}

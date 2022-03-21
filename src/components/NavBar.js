@@ -6,11 +6,12 @@ export default function NavBar() {
   return (
     <>
       <div className='navbar'>
-          <h4>Get Better</h4>
+          <h3>Get Better</h3>
           <nav> 
               <Link to='/home'>Home</Link>
-              <Link to='/weight-loss'>Weight Loss</Link>
               <Link to='/training'>Training</Link>
+              <Link to='/weight-loss'>Weight Loss</Link>
+             
           </nav>
       </div>
     </>

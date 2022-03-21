@@ -24,7 +24,7 @@ export default function SideBar() {
     activityLevel:activityLevelRef.current.value
     })
     // Result needs to be calculated based on the input.
-    setResult(1)
+    setResult(2000)
   }
   console.log(formValues, result);
 
@@ -38,7 +38,7 @@ export default function SideBar() {
 
         <div className="form-group" controlid="age">
             <label>Enter Your Age</label>
-            <input type="number" min={1} max={80} ref={ageRef}  required/>
+            <input type="number" min={16} max={80} ref={ageRef}  required/>
         </div>
         
         <div className="form-group" controlid="activityLevel">

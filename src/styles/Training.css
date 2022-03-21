@@ -1,0 +1,22 @@
+.exercise-group{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+}
+.exercise-card{
+    margin: 1rem 0;
+    border: 1px solid red;
+    height: 20vh;
+    width: 30%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+.exercise-card > p:last-child{
+    border: .50px solid rgb(0, 149, 255);
+    display: block;
+    width: 50%;
+
+}
