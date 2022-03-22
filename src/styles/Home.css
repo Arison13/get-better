@@ -16,7 +16,6 @@
     background-position: center;
     object-fit: contain;
     /* background-repeat: no-repeat; */
-    /* border: 1px solid red; */
 }
 .landing-text{
     box-shadow: 1px 1px 1px 1px white;
@@ -27,15 +26,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: invert(40%);
+    backdrop-filter: contrast(40%);
 }
 
 .btn-div {
-    /* border: 1px solid red; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* width: 50%; */
 }
 
 .btn{

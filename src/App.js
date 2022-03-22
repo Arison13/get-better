@@ -28,10 +28,8 @@ function App() {
         <NavBar />    
   </div>
   {/* Every Components Section */}
-  <div className='bg-img'>
     <div className='app'>
       {/* SideBar Section */}
-     
       <div className={`sidebar ${sidebar}`}>
 
         {
@@ -53,7 +51,6 @@ function App() {
             <Home showSide={onClick}/>
           </Route>
         </Switch>  
-    </div>
   </div>
   </>
   );
