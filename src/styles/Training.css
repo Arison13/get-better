@@ -1,23 +1,63 @@
 .training {
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     background-image:url(https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1675&q=80);
     background-position: center;
     object-fit: contain;
-    
+    flex-direction: column;
+    height: 100vh;
+}
+
+.search {
+    margin:auto;
+    color: black;
+    border-radius: 4px;
+    width: 30vw;
+    box-shadow: 3px 3px 4px 4px rgb(32, 32, 32, .9);
+    padding:1.3rem ;
+    background-color: rgb(0, 149, 255, .80);
+    height: 10vh;
+}
+.search > form > input {
+    width: 60%;
+    margin: 0 1rem;
+    border-radius: 3px;
+    padding: 4px .25rem;
+    border: none;
+    box-shadow: 1px 1px 1px 2px black;
+}
+.search > form > label {
+    text-shadow: 1px 1px 1px black;
+    padding: .50rem;
+    text-decoration: none;
+    border-bottom: 0;
+    text-align: center;
+    display: block;
+    margin-bottom: 0;
+}
+.submit-btn{
+    padding: .40rem 1.5rem;
+    background-color: rgba(12, 12, 12, 0.8);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.submit-btn:hover {
+    background-color: rgba(12, 12, 12, 1);
+    padding: .55rem 1.6rem;
+    font-weight: 700;
 }
 .exercise-group{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
 }
 .exercise-card{
     margin: 1rem .50rem;
-    /* border: 1px solid red; */
     height: 20vh;
     width: 25%;
     padding: 1rem;
@@ -27,7 +67,6 @@
     background-color: rgb(255, 255, 255, .8);
     color: black;
     border-radius: 5px;
-    /* box-sizing:content-box; */
     box-shadow: 1px 3px 3px 3px rgb(32, 32, 32, .9);
 }
 .exercise-card > h4 {
@@ -40,9 +79,3 @@
     width: 80%;
 }
 
-/* .search-section{
-    border: 1px solid blue;
-    top: 0;
-    height: 50vh;
-    width: 20vw;
-} */

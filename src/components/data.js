@@ -1,50 +1,59 @@
 const exercises = [
     {
         name:"Pull down",
-        muscule: "back",
+        muscule: "Back",
         sets: 4,
         weight:"40lb",
         reps:"8-12",
-        tips:"Pull With Your Lats"
+        tips:"Pull With Your Lats",
+        category:"upperbody, back"
     },
     {
         name:"Pull ups",
-        muscule: "back",
+        muscule: "Back",
         sets: 2,
         weight:"body weigth",
         reps:"4",
-        tips:"Focus On Pulling With Your Back"
+        tips:"Focus On Pulling With Your Back",
+        category:"upperbody, back"
+
     },
     {
         name:"Bench press",
-        muscule: "chest",
+        muscule: "Chest",
         sets: 4,
         weight:"50lb",
         reps:"8-12",
-        tips:"Retract Your Scapula"
+        tips:"Retract Your Scapula",
+        category:"upperbody, chest"
+
     },
     {
         name:"Bench ",
-        muscule: "chest",
+        muscule: "Chest",
         sets: 4,
         weight:"50lb",
         reps:"8-12",
-        tips:"Retract Your Scapula"
-    }, {
+        tips:"Retract Your Scapula",
+        category:"upperbody, chest"
+    }, 
+    {
         name:"idk ",
-        muscule: "chest",
+        muscule: "Chest",
         sets: 4,
         weight:"50lb",
         reps:"8-12",
-        tips:"Retract Your Scapula"
+        tips:"Retract Your Scapula",
+        category:"upperbody, chest"
     },
     {
         name:"try ",
-        muscule: "chest",
+        muscule: "Chest",
         sets: 4,
         weight:"50lb",
         reps:"8-12",
-        tips:"Retract Your Scapula"
+        tips:"Retract Your Scapula",
+        category:"upperbody, chest"
     }
 ]
 
