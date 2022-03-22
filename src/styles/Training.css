@@ -51,7 +51,7 @@
 }
 .exercise-group{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     width: 100vw;
     height: 90vh;
