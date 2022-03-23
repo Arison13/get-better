@@ -12,7 +12,7 @@ export default function Training() {
       if(search === "All" || search === "all"){
         return data;
       }
-      else{ return e.muscule === search;}
+      else{ return e.muscule.toLowerCase() === search.toLowerCase();}
     })
     setSearch("")
     setData(filteredExercises)
