@@ -33,3 +33,24 @@ nav > a:hover {
     font-weight: 700;
     color: white;
 }
+
+@media only screen and (max-width: 425px){
+
+    nav {
+        width: 75%;
+    }
+    .navbar >h3 {
+        margin-left: 0;
+    }
+    .navbar {
+        width: 100%;
+        justify-content: space-around;
+
+    }
+    .navbar >h3 {
+        margin-left: 0;
+    }
+    nav > a{
+        padding: 5px 5px;
+    }
+}

@@ -9,7 +9,7 @@ export default function Training() {
   const onSubmit = (e) => {
     e.preventDefault();
     const filteredExercises = exercises.filter(e => {
-      if(search === "All" || search === "all"){
+      if(search.toLowerCase() === "all"){
         return data;
       }
       else{ return e.muscule.toLowerCase() === search.toLowerCase();}
