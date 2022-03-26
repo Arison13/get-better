@@ -22,7 +22,7 @@
 
 .sidebar{
   position: fixed;
-  transition: transform ease-in .4s;
+  transition: transform ease-out .4s;
   transform: translateX(100%);
   background-color: rgb(7, 10, 34);
   width: 0;
@@ -33,5 +33,6 @@
   width: 80vw;
   padding: 0 .50rem;
   /* margin-right: .50rem; */
+  /* box-shadow: 10px 10px 10px 10px black; */
 } 
 

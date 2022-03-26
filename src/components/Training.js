@@ -17,6 +17,7 @@ export default function Training() {
     setSearch("")
     setData(filteredExercises)
   }
+
   return (
     <div className='training'>
       <div className="search">
@@ -30,7 +31,6 @@ export default function Training() {
             placeholder='eg: Back, Chest, Shoulders' />
             <button className='submit-btn'>Search</button>
           </form>
-          {/* <button className='submit-btn'>Reset Filter</button> */}
       </div>
       <div className='exercise-group'>
         {
