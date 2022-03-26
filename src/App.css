@@ -5,8 +5,6 @@
 .app {
   width: 100%;
   display: flex;
-  /* background-image: url("https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"); */
-  /* height: 100vh; */
 }
 .x {
   height:2rem;
@@ -24,14 +22,15 @@
 
 .sidebar{
   position: fixed;
-  transition: transform ease-in-out .5s;
+  transition: transform ease-in .4s;
   transform: translateX(100%);
   background-color: rgb(7, 10, 34);
+  width: 0;
 }
 .sidebar-open{
   position: relative;
   transform: translate(0);
-  width: 30%;
+  width: 80vw;
   padding: 0 .50rem;
   /* margin-right: .50rem; */
 } 
