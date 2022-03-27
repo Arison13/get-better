@@ -87,9 +87,6 @@
    .search{
     width: 60vw;
    }
-   .training {
-       /* border: 2px solid blue; */
-   }
    .search > form > input {
        margin-bottom: .50rem;
    }
@@ -101,11 +98,9 @@
        width: 100%;
    }
    .exercise-group {
-       /* border: 1px solid red; */
        height: 90%;
    }
    .exercise-card{
-       /* border: 3px solid red; */
        width: 100vw;
        height: 15vh;
    }
