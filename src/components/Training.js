@@ -14,21 +14,20 @@ export default function Training() {
       }
       else{ return e.muscule.toLowerCase() === search.toLowerCase();}
     })
-    setSearch("")
     setData(filteredExercises)
   }
-
   return (
     <div className='training'>
       <div className="search">
         <form onSubmit={onSubmit}> 
           <label>Filter By Muscule:</label>
-            <input className='search-input' 
-            type='text' 
-            name='search'
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder='eg: Back, Chest, Shoulders' />
+            <select className='search-input' value={search} onChange={(e)=> setSearch(e.target.value)}>
+              <option>All</option>
+              <option>Back</option>
+              <option>Chest</option>
+              <option>Shoulder</option>
+            </select>
+
             <button className='submit-btn'>Search</button>
           </form>
       </div>
@@ -38,6 +37,9 @@ export default function Training() {
             return <ExerciseBuilder exercise={e} key={e.name}/>
           })
         }
+      </div>
+      <div className='btn-div'>
+        <button className='add-btn'> <a href='#'>Add Exercise </a></button>
       </div>
     </div>
   )
