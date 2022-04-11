@@ -4,6 +4,7 @@ import "../styles/Training.css";
 
 export default function Training() {
   const [data, setData] = useState(exercises);
+  const [failure, setFailure] = useState(false)
   const [search, setSearch] = useState("");
 
   const onSubmit = (e) => {
@@ -14,7 +15,6 @@ export default function Training() {
       }
       else{ return e.muscule.toLowerCase() === search.toLowerCase();}
     })
-    setSearch("")
     setData(filteredExercises)
   }
 
@@ -23,12 +23,13 @@ export default function Training() {
       <div className="search">
         <form onSubmit={onSubmit}> 
           <label>Filter By Muscule:</label>
-            <input className='search-input' 
-            type='text' 
-            name='search'
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder='eg: Back, Chest, Shoulders' />
+            <select className='search-input' value={search} onChange={(e)=> setSearch(e.target.value)}>
+              <option>All</option>
+              <option>Back</option>
+              <option>Chest</option>
+              <option>Shoulder</option>
+            </select>
+
             <button className='submit-btn'>Search</button>
           </form>
       </div>
@@ -38,6 +39,11 @@ export default function Training() {
             return <ExerciseBuilder exercise={e} key={e.name}/>
           })
         }
+        { failure && <p className='error-text'> Not Found, Try Adding It!</p>}
+      </div>
+      
+      <div className='btn-div'>
+        <button className='add-btn'> <a href='#'>Add Exercise </a></button>
       </div>
     </div>
   )
@@ -46,6 +52,7 @@ export default function Training() {
   const ExerciseBuilder = ({exercise}) =>{
     return (
       <div className='exercise-card'>
+
           {/* optional add image */}
           <h4>{exercise.muscule}</h4>
           <p>Exercise: {exercise.name} </p>
