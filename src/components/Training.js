@@ -4,6 +4,7 @@ import "../styles/Training.css";
 
 export default function Training() {
   const [data, setData] = useState(exercises);
+  const [failure, setFailure] = useState(false)
   const [search, setSearch] = useState("");
 
   const onSubmit = (e) => {
@@ -16,6 +17,7 @@ export default function Training() {
     })
     setData(filteredExercises)
   }
+
   return (
     <div className='training'>
       <div className="search">
@@ -37,7 +39,9 @@ export default function Training() {
             return <ExerciseBuilder exercise={e} key={e.name}/>
           })
         }
+        { failure && <p className='error-text'> Not Found, Try Adding It!</p>}
       </div>
+      
       <div className='btn-div'>
         <button className='add-btn'> <a href='#'>Add Exercise </a></button>
       </div>
@@ -48,6 +52,7 @@ export default function Training() {
   const ExerciseBuilder = ({exercise}) =>{
     return (
       <div className='exercise-card'>
+
           {/* optional add image */}
           <h4>{exercise.muscule}</h4>
           <p>Exercise: {exercise.name} </p>
