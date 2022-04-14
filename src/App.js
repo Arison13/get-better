@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {Switch, Route} from 'react-router-dom';
 import {FiX } from "react-icons/fi";
-import axios from 'axios';
 import NavBar from './components/NavBar';
 import SideBar from './components/SideBar';
 import Training from './components/Training';
@@ -12,16 +11,15 @@ import './App.css';
 function App() {
   const[sidebar, setSidebar]= useState("")
   const [open, setOpen] = useState(false);
-  const [exerciseData, setExerciseData] = useState([])
+  // const [exerciseData, setExerciseData] = useState([])
 
-  useEffect(()=> {
-      axios.get("http://localhost:9000/exercises")
-      .then(res => {
-        setExerciseData(res.data.exercises)
-        console.log(res.data.exercises)
-      })
-      .catch(err => console.log({err}))
-    }, [])
+  // useEffect(()=> {
+  //     axios.get("http://localhost:9000/exercises")
+  //     .then(res => {
+  //       setExerciseData(res.data.exercises)
+  //     })
+  //     .catch(err => console.log({err}))
+  //   }, [])
 
   const onClick = () => {
     if(open === false){
@@ -55,7 +53,7 @@ function App() {
         </div> 
         <Switch> 
           <Route path='/training'>
-            <Training exercises={exerciseData}/>
+            <Training/>
           </Route>
 
           <Route path='/weight-loss' component={WeightLoss} />

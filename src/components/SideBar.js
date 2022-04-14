@@ -25,6 +25,7 @@ export default function SideBar() {
     })
     // Result needs to be calculated based on the input.
     setResult(2000)
+    alert(`Your estimated calorie intake should be: ${2000} cals`)
   }
   console.log(formValues, result);
 

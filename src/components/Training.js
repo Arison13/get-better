@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import "../styles/Training.css";
-
-export default function Training({exercises}) {
+import exercises from './data'
+export default function Training() {
 
   const [data, setData] = useState(exercises);
-  const [failure, setFailure] = useState(false)
+  // const [failure] = useState(false)
   const [search, setSearch] = useState("");
 
   const onSubmit = (e) => {
@@ -16,7 +16,6 @@ export default function Training({exercises}) {
       else{ return e.muscule.toLowerCase() === search.toLowerCase();}
     })
     setData(filteredExercises)
-   
   }
 
   
@@ -41,11 +40,11 @@ export default function Training({exercises}) {
             return <ExerciseBuilder exercise={e} key={e.name}/>
           })
         }
-        { failure && <p className='error-text'> Not Found, Try Adding It!</p>}
+        {/* { failure && <p className='error-text'> Not Found, Try Adding It!</p>} */}
       </div>
       
       <div className='btn-div'>
-        <button className='add-btn'> <a href='#'>Add Exercise </a></button>
+        <button className='add-btn'>Add Exercise</button>
       </div>
     </div>
   )
