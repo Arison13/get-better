@@ -1,4 +1,4 @@
-label {
+.form-group label {
     color:white;
     letter-spacing: 2px;
     font-weight: 600;
@@ -19,12 +19,12 @@ label {
     text-shadow: 1px 1px 1px black;
 }
 
-input{
+.form-group input{
     padding: .25rem;
     width: 99%;
     border-radius: 10px;
 }
-select{
+.form-group select{
    width: 30%;
    color: black;
    padding: .50em 1em;

@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
 import "../styles/Training.css";
 import exercises from './data'
-export default function Training() {
+import AddExercise from './AddExercise';
 
+export default function Training() {
   const [data, setData] = useState(exercises);
-  // const [failure] = useState(false)
   const [search, setSearch] = useState("");
+  const [open, setOpen] = useState(true)
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -18,8 +19,10 @@ export default function Training() {
     setData(filteredExercises)
   }
 
+  console.log(open)
   
   return (
+    <div>
     <div className='training'>
       <div className="search">
         <form onSubmit={onSubmit}> 
@@ -40,15 +43,22 @@ export default function Training() {
             return <ExerciseBuilder exercise={e} key={e.name}/>
           })
         }
-        {/* { failure && <p className='error-text'> Not Found, Try Adding It!</p>} */}
       </div>
       
       <div className='btn-div'>
-        <button className='add-btn'>Add Exercise</button>
+        <button className='add-btn' onClick={()=> setOpen(true)}>Add Exercise</button>
       </div>
     </div>
+      
+      <AddExercise open={open} setOpen={setOpen}/>
+     </div>
+    
   )
 }
+
+
+
+
 
   const ExerciseBuilder = ({exercise}) =>{
     return (

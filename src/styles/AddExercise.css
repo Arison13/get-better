@@ -1,0 +1,20 @@
+/* dialog::backdrop{
+    background-color: red;
+    border: 1px solid blue;
+} */
+dialog{
+    /* border: 10px solid blue; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+dialog > input {
+    border: none;
+}
+dialog > label {
+    color: black;
+}
