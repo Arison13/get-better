@@ -4,7 +4,6 @@ import '../styles/WeightLoss.css';
 export default function WeightLoss() {
   return (
     <div>
-      {/* <h4> WeightLoss</h4> */}
       <div className='weight-content'>
           <p className='weight-text'>
           is simply dummy text of the printing and typesetting industry.

@@ -1,16 +1,27 @@
-import { useState } from 'react';
-import './App.css';
+import { useState, useEffect } from 'react';
+import {Switch, Route} from 'react-router-dom';
+import {FiX } from "react-icons/fi";
+import axios from 'axios';
 import NavBar from './components/NavBar';
 import SideBar from './components/SideBar';
-import {Switch, Route} from 'react-router-dom';
 import Training from './components/Training';
 import WeightLoss from './components/WeightLoss';
 import Home from './components/Home';
-import {FiX } from "react-icons/fi";
+import './App.css';
 
 function App() {
   const[sidebar, setSidebar]= useState("")
   const [open, setOpen] = useState(false);
+  const [exerciseData, setExerciseData] = useState([])
+
+  useEffect(()=> {
+      axios.get("http://localhost:9000/exercises")
+      .then(res => {
+        setExerciseData(res.data.exercises)
+        console.log(res.data.exercises)
+      })
+      .catch(err => console.log({err}))
+    }, [])
 
   const onClick = () => {
     if(open === false){
@@ -22,6 +33,7 @@ function App() {
       setSidebar("")
     }
   }
+
   return (
   <> 
   <div className="heading">
@@ -42,7 +54,10 @@ function App() {
         }       
         </div> 
         <Switch> 
-          <Route path='/training' component={Training} />
+          <Route path='/training'>
+            <Training exercises={exerciseData}/>
+          </Route>
+
           <Route path='/weight-loss' component={WeightLoss} />
           <Route path="/home">
             <Home showSide={onClick}/>

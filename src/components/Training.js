@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
-import exercises from './data'
 import "../styles/Training.css";
 
-export default function Training() {
+export default function Training({exercises}) {
+
   const [data, setData] = useState(exercises);
   const [failure, setFailure] = useState(false)
   const [search, setSearch] = useState("");
@@ -16,8 +16,10 @@ export default function Training() {
       else{ return e.muscule.toLowerCase() === search.toLowerCase();}
     })
     setData(filteredExercises)
+   
   }
 
+  
   return (
     <div className='training'>
       <div className="search">
