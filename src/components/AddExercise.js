@@ -8,8 +8,8 @@ export default function AddExercise({open, setOpen}) {
     <> 
     <dialog className = "dialog" open={open}>
         <header className='modal-header'> 
-        <h3>AddExercise </h3>
-        <FiX onClick={()=> setOpen(false)}/>
+            <h3>AddExercise </h3>
+            <FiX onClick={()=> setOpen(false)}/>
         </header>
         <form className='add-form'>
             <div className='question'> 

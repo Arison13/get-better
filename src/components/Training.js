@@ -18,9 +18,7 @@ export default function Training() {
     })
     setData(filteredExercises)
   }
-
-  console.log(open)
-  
+    
   return (
     <div>
     <div className='training'>
@@ -50,7 +48,7 @@ export default function Training() {
       </div>
     </div>
       
-      <AddExercise open={open} setOpen={setOpen}/>
+      {/* <AddExercise open={open} setOpen={setOpen}/> */}
      </div>
     
   )

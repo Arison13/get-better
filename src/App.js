@@ -7,20 +7,10 @@ import Training from './components/Training';
 import WeightLoss from './components/WeightLoss';
 import Home from './components/Home';
 import './App.css';
-import AddExercise from './components/AddExercise';
 
 function App() {
   const[sidebar, setSidebar]= useState("")
   const [open, setOpen] = useState(false);
-  // const [exerciseData, setExerciseData] = useState([])
-
-  // useEffect(()=> {
-  //     axios.get("http://localhost:9000/exercises")
-  //     .then(res => {
-  //       setExerciseData(res.data.exercises)
-  //     })
-  //     .catch(err => console.log({err}))
-  //   }, [])
 
   const onClick = () => {
     if(open === false){
