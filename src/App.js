@@ -7,6 +7,7 @@ import Training from './components/Training';
 import WeightLoss from './components/WeightLoss';
 import Home from './components/Home';
 import './App.css';
+import AddExercise from './components/AddExercise';
 
 function App() {
   const[sidebar, setSidebar]= useState("")
@@ -37,9 +38,8 @@ function App() {
   <div className="heading">
         <NavBar />    
   </div>
-  {/* Every Components Section */}
-    <div className='app'>
-      {/* SideBar Section */}
+
+    <div className={`${open ? "app-open" : "app"}`}>
       <div className={`sidebar ${sidebar}`}>
 
         {
@@ -48,7 +48,6 @@ function App() {
             <FiX className='x' onClick={onClick}/>
             <SideBar />
           </>
-          // :  <FiMenu className='menu' onClick={onClick}/> 
         }       
         </div> 
         <Switch> 

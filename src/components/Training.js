@@ -6,7 +6,7 @@ import AddExercise from './AddExercise';
 export default function Training() {
   const [data, setData] = useState(exercises);
   const [search, setSearch] = useState("");
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
 
   const onSubmit = (e) => {
     e.preventDefault();

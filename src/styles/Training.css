@@ -7,7 +7,7 @@
     flex-direction: column;
     /* height: 100vh; */
 }
-.error-text {
+/* .error-text {
     margin-top: 20%;
     border: 1px solid red;
     color: black;
@@ -19,7 +19,7 @@
     justify-content: center;
     align-items: center;
     background-color: rgb(243, 236, 236, 0.8);
-}
+} */
 
 .search {
     margin:auto;
@@ -40,13 +40,18 @@
     box-shadow: 1px 1px 1px 2px black;
 }
 .search > form > label {
+    color: white;
     text-shadow: 1px 1px 1px black;
+    letter-spacing: 2px;
     padding: .50rem;
     text-decoration: none;
     border-bottom: 0;
     text-align: center;
     display: block;
     margin-bottom: 0;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+
 }
 .submit-btn{
     padding: .40rem 1.5rem;
@@ -58,7 +63,6 @@
     cursor: pointer;
 }
 .submit-btn:hover {
-    /* background-color: rgba(12, 12, 12, 1); */
     background-color: rgb(248, 246, 246);
     color: black;
     padding: .55rem 1.6rem;
@@ -71,7 +75,6 @@
     flex-wrap: wrap;
     width: 100vw;
     height: 90vh;
-    border: 1px solid red;
 }
 .exercise-card{
     margin: 1rem .50rem;
@@ -91,7 +94,7 @@
     text-decoration: underline;
 }
 .exercise-card > p:last-child{
-    border: 1px solid rgb(0, 149, 255);
+    /* border: 1px solid rgb(0, 149, 255); */
     display: block;
     width: 80%;
 }
@@ -133,6 +136,12 @@
    .exercise-card{
        width: 100vw;
        height: 15vh;
+   }
+   .submit-btn:hover {
+    margin-top: 4%;
+    font-weight: "";
+    width: 45%;
+    padding: .40rem 1.5rem;
    }
    .add-btn {
        width: 40%;
