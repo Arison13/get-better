@@ -10,6 +10,7 @@
     width: 40%;
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 1px 1px 2px 2px rgb(0, 0, 0, .9);
+    border-radius:5px ;
 }
 .dialog[open] {
     animation: .2s linear slidein;
@@ -37,6 +38,7 @@
 
 .add-form {
     width: 100%;
+    border: none;
 }
 .question {
     padding: .50% 0;
