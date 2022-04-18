@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import '../styles/AddExercise.css';
 import {FiX } from "react-icons/fi";
 

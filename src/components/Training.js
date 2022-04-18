@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import "../styles/Training.css";
 import exercises from './data'
-import AddExercise from './AddExercise';
+// import AddExercise from './AddExercise';
+import {FiX } from "react-icons/fi";
+import '../styles/AddExercise.css';
 
 export default function Training() {
   const [data, setData] = useState(exercises);
@@ -18,7 +20,7 @@ export default function Training() {
     })
     setData(filteredExercises)
   }
-    
+
   return (
     <div>
     <div className='training'>
@@ -46,6 +48,39 @@ export default function Training() {
       <div className='btn-div'>
         <button className='add-btn' onClick={()=> setOpen(true)}>Add Exercise</button>
       </div>
+      
+      <dialog className = "dialog" open={open}>
+        <header className='modal-header'> 
+            <h3>AddExercise </h3>
+            <FiX onClick={()=> setOpen(false)}/>
+        </header>
+        <form className='add-form'>
+            <div className='question'> 
+                <label> Enter muscule targeted </label>
+                <input type='text' placeholder="trying stuff"/>
+            </div>
+            <div className='question'> 
+                <label> Enter exercise name </label>
+                <input type='text' placeholder="trying stuff"/>
+            </div>
+            <div className='question'> 
+                <label> Enter numer of reps </label>
+                <input type='text' placeholder="trying stuff"/>
+            </div>
+            
+            <div className='question'> 
+                <label> Enter number of sets </label>
+                <input type='text' placeholder="trying stuff"/>
+            </div>
+            <div className='question'> 
+                <label> Enter any tips </label>
+                <input type='text' placeholder="trying stuff"/>
+            </div>
+        </form>
+        <div className='btn-div'> 
+            <button className='exercise-submit' onClick={()=> setOpen(false)}> Submit </button>
+        </div> 
+    </dialog>
     </div>
       
       {/* <AddExercise open={open} setOpen={setOpen}/> */}
