@@ -25,7 +25,7 @@ export default function Training() {
     <div>
     <div className='training'>
       <div className="search">
-        <form onSubmit={onSubmit}> 
+        <form onSubmit={onSubmit} > 
           <label>Filter By Muscule:</label>
             <select className='search-input' value={search} onChange={(e)=> setSearch(e.target.value)}>
               <option>All</option>

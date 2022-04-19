@@ -6,12 +6,12 @@ export default function AddExercise({open, setOpen}) {
 
   return (
     <> 
-    <dialog className = "dialog" open={open}>
+    <dialog className="dialog" open={open} >
         <header className='modal-header'> 
             <h3>New Exercise </h3>
             <FiX onClick={()=> setOpen(false)}/>
         </header>
-        <form className='add-form'>
+        <form className='add-form' >
             <div className='question'> 
                 <label> Enter muscule targeted </label>
                 <input type='text' placeholder="trying stuff"/>
@@ -42,3 +42,5 @@ export default function AddExercise({open, setOpen}) {
   )
 }
 
+
+// onFocusCapture={()=> alert('focus on dialog')}
