@@ -48,8 +48,7 @@ export default function Training() {
       <div className='btn-div'>
         <button className='add-btn' onClick={()=> setOpen(true)}>Add Exercise</button>
       </div>
-      
-      <dialog className = "dialog" open={open}>
+      {open ?<dialog className = "dialog" open={open}>
         <header className='modal-header'> 
             <h3>AddExercise </h3>
             <FiX onClick={()=> setOpen(false)}/>
@@ -80,7 +79,8 @@ export default function Training() {
         <div className='btn-div'> 
             <button className='exercise-submit' onClick={()=> setOpen(false)}> Submit </button>
         </div> 
-    </dialog>
+    </dialog> : <></>}
+      
     </div>
       
       {/* <AddExercise open={open} setOpen={setOpen}/> */}
