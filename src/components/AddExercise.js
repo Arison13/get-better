@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import '../styles/AddExercise.css';
 import {FiX } from "react-icons/fi";
 
@@ -8,7 +8,7 @@ export default function AddExercise({open, setOpen}) {
     <> 
     <dialog className = "dialog" open={open}>
         <header className='modal-header'> 
-            <h3>AddExercise </h3>
+            <h3>New Exercise </h3>
             <FiX onClick={()=> setOpen(false)}/>
         </header>
         <form className='add-form'>

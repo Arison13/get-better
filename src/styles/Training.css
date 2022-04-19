@@ -7,20 +7,6 @@
     flex-direction: column;
     /* height: 100vh; */
 }
-/* .error-text {
-    margin-top: 20%;
-    border: 1px solid red;
-    color: black;
-    font-size: larger;
-    text-shadow: 2px 2px 2px white;
-    display: flex;
-    width: 50%;
-    height: 25%;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(243, 236, 236, 0.8);
-} */
-
 .search {
     margin:auto;
     color: black;
@@ -94,10 +80,10 @@
     text-decoration: underline;
 }
 .exercise-card > p:last-child{
-    /* border: 1px solid rgb(0, 149, 255); */
     display: block;
     width: 80%;
 }
+
 .add-btn {
     padding: 1rem 1.5rem;
     background-color: rgba(231, 228, 228);
@@ -108,11 +94,11 @@
     cursor: pointer;
     width: 10%;
     margin-bottom: .75rem;
+    font-weight: 600;
 }
 .add-btn:hover {
-    transform: translateY(-20%);
-    /* padding:.75rem 1.5rem; ; */
-    background-color: rgba(12, 12, 12);
+    transform: scale(110%);
+    background-color: rgb(10, 127, 224);
     color:white;
 }
 
