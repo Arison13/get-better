@@ -35,7 +35,7 @@ export default function AddExercise({open, setOpen}) {
             </div>
         </form>
         <div className='btn-div'> 
-            <button className='exercise-submit' onClick={()=> setOpen(false)}> Submit </button>
+            <button className='exercise-submit' onClick={()=> setOpen(false)}>Add Exercise!</button>
         </div> 
     </dialog>
     </>
