@@ -11,6 +11,7 @@
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 1px 1px 2px 2px rgb(0, 0, 0, .9);
     border-radius:5px ;
+    border: 4px solid rgb(10, 127, 224);
 }
 .dialog[open] {
     animation: .2s linear slidein;
@@ -22,9 +23,14 @@
     border-bottom: 2px solid rgb(10, 127, 224);
     padding: .25rem .50rem;
     margin-bottom: .50rem;
+    background-color: rgb(74, 69, 69);
 }
-
+.modal-header > h3 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+    color: white;
+}
 .modal-header > svg {
+    color: white;
     border-radius: 5px;
     width: 2rem;
     height: 2rem;
@@ -32,13 +38,13 @@
     transition: transform ease-out 200ms;
 }
 .modal-header > svg:hover {
-    color:red ;
+    color:#fff ;
+    background-color: red;
     transform: rotate(90deg);
 }
 
 .add-form {
     width: 100%;
-    border: none;
 }
 .question {
     padding: .50% 0;
@@ -56,6 +62,11 @@
     border-radius: 4px;
     width: 50%;
     padding: .25rem;
+    border: 1.5px solid black;
+    margin-right: 2px;
+}
+.question:last-of-type {
+    margin-bottom: 5px;
 }
 
 .exercise-submit {
@@ -68,6 +79,7 @@
     cursor: pointer;
 }
 
+/* Modal Animation */
 @keyframes slidein {
     from {
         transform: translate3d(0, 5px, 0);
@@ -82,5 +94,22 @@
     }
     to {
         opacity: 1;
+    }
+}
+/* Media queries */
+
+@media only screen and (max-width: 425px){ 
+    .dialog {
+        top:80%;
+        width: 85%;
+    }
+    .modal-header > svg {
+        color: red;
+    }
+    .question {
+        margin-right: 4px;
+    }
+    .question:last-of-type {
+        margin-bottom: 9px;
     }
 }
