@@ -25,10 +25,7 @@ export default function AddExercise({open, setOpen, data, setData}) {
     const onSubmit = ev => {
         ev.preventDefault();
         setOpen(false)  
-        // setData({
-        //     ...data,
-        //     formValues
-        // })
+        // this would be a POST call to the backend server
         exercises.push(formValues)
     }
 

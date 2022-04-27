@@ -20,6 +20,7 @@ export default function Training() {
   }
   useEffect(()=> {
     console.log('CHANGES IN DATA', exercises);
+    // this would be a get call to the server in on order to set state to it everytime we render, or add changes to the API
     setData(exercises);
   }, [exercises])
 

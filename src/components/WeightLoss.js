@@ -2,9 +2,12 @@ import React from 'react'
 import '../styles/WeightLoss.css';
 
 export default function WeightLoss() {
+
+  alert("The following page is not done yet, and it will continue to change for the upcoming days")
   return (
     <div>
-      <div className='weight-content'>
+      <h2> Work In Progress ... </h2>
+      {/* <div className='weight-content'>
           <p className='weight-text'>
           is simply dummy text of the printing and typesetting industry.
           is simply dummy text of the printing and typesetting industry.
@@ -21,7 +24,7 @@ export default function WeightLoss() {
           is simply dummy text of the printing and typesetting industry.
           is simply dummy text of the printing and typesetting industry.
          </p>
-       </div>
+       </div> */}
     </div>
   )
 }
