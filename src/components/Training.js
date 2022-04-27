@@ -1,9 +1,7 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import "../styles/Training.css";
 import exercises from './data'
 import AddExercise from './AddExercise';
-import {FiX } from "react-icons/fi";
-import '../styles/AddExercise.css';
 
 export default function Training() {
   const [data, setData] = useState(exercises);
@@ -20,6 +18,10 @@ export default function Training() {
     })
     setData(filteredExercises)
   }
+  useEffect(()=> {
+    console.log('CHANGES IN DATA', exercises);
+    setData(exercises);
+  }, [exercises])
 
   return (
     <div>
@@ -50,7 +52,7 @@ export default function Training() {
       
       { open 
         ? 
-          <AddExercise open={open} setOpen={setOpen}/> 
+          <AddExercise open={open} setOpen={setOpen} data={data} setData={setData} /> 
         : 
           <div className='btn-div'>
             <button className='add-btn' onClick={()=> setOpen(true)}>Add Exercise </button>

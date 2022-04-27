@@ -40,19 +40,19 @@ function App() {
           </>
         }       
         </div> 
-        <Switch> 
-          <Route path='/training'>
-            <Training/>
-          </Route>
+          <Switch> 
+            <Route path='/training'>
+              <Training/>
+            </Route>
 
-          <Route path='/weight-loss' component={WeightLoss} />
-          <Route path="/home">
-            <Home showSide={onClick}/>
-          </Route>
-          <Route exact path='/'>
-            <Home showSide={onClick}/>
-          </Route>
-        </Switch>  
+            <Route path='/weight-loss' component={WeightLoss} />
+            <Route path="/home">
+              <Home showSide={onClick}/>
+            </Route>
+            <Route exact path='/'>
+              <Home showSide={onClick}/>
+            </Route>
+          </Switch>  
   </div>
   </>
   );

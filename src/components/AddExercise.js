@@ -1,17 +1,19 @@
 import React, { useState } from 'react'
 import '../styles/AddExercise.css';
 import { FiX } from "react-icons/fi";
+import exercises from './data';
 
 
 const initialFormValues = {
+    name:"",
     muscule:"",
-    exercise:"",
-    reps:"",
     sets:"",
-    tips:""
-  };
-export default function AddExercise({open, setOpen}) {
-    const [formValues, setFormValues] = useState(initialFormValues)
+    weight:"",
+    reps:"",
+    tips:"",
+}
+export default function AddExercise({open, setOpen, data, setData}) {
+    const [formValues, setFormValues] = useState([initialFormValues])
 
     const handleOnChange = ev => {
         setFormValues({
@@ -22,8 +24,12 @@ export default function AddExercise({open, setOpen}) {
 
     const onSubmit = ev => {
         ev.preventDefault();
-        console.log(formValues)
         setOpen(false)  
+        // setData({
+        //     ...data,
+        //     formValues
+        // })
+        exercises.push(formValues)
     }
 
   return (
@@ -36,24 +42,24 @@ export default function AddExercise({open, setOpen}) {
         <form className='add-form' onSubmit={onSubmit} >
             <div className='question'> 
                 <label> Enter muscule targeted </label>
-                <input value={formValues.muscule} name="muscule" type='text' onChange={handleOnChange} placeholder="Enter muscule"/>
+                <input required value={formValues.muscule} name="muscule" type='text' onChange={handleOnChange} placeholder="Enter muscule"/>
             </div>
             <div className='question'> 
                 <label> Enter exercise name </label>
-                <input value={formValues.exercise} name='exercise' type='text' onChange={handleOnChange} placeholder="Enter exercise"/>
+                <input required value={formValues.name} name='name' type='text' onChange={handleOnChange} placeholder="Enter exercise name"/>
             </div>
             <div className='question'> 
                 <label> Enter numer of reps </label>
-                <input value={formValues.reps} name='reps' type='text' onChange={handleOnChange} placeholder="Enter reps"/>
+                <input required value={formValues.reps} name='reps' type='text' onChange={handleOnChange} placeholder="Enter reps"/>
             </div>
             
             <div className='question'> 
                 <label> Enter number of sets </label>
-                <input value={formValues.sets} name='sets' type='text' onChange={handleOnChange} placeholder="Enter sets"/>
+                <input required value={formValues.sets} name='sets' type='text' onChange={handleOnChange} placeholder="Enter sets"/>
             </div>
             <div className='question'> 
                 <label> Enter any tips </label>
-                <input value={formValues.tips} name='tips' type='text' onChange={handleOnChange} placeholder="Enter tips"/>
+                <input required value={formValues.tips} name='tips' type='text' onChange={handleOnChange} placeholder="Enter tips"/>
             </div>
             
             <div className='btn-div'> 

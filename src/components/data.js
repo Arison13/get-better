@@ -29,7 +29,7 @@ const exercises = [
 
     },
     {
-        name:"Bench ",
+        name:"Bench",
         muscule: "Chest",
         sets: 4,
         weight:"50lb",
@@ -38,23 +38,32 @@ const exercises = [
         category:"upperbody, chest"
     }, 
     {
-        name:"idk ",
+        name:"DB Flies ",
         muscule: "Chest",
         sets: 4,
         weight:"50lb",
         reps:"8-12",
-        tips:"Retract Your Scapula",
+        tips:"pull dumbells with your chest",
         category:"upperbody, chest"
     },
     {
-        name:"try ",
-        muscule: "Chest",
+        name:"squats",
+        muscule: "Legs",
+        sets: 5,
+        weight:"100lb",
+        reps:"10-12",
+        tips:"keep your back straight",
+        category:"lowerbody"   
+    },
+    {
+        name:"Quad Extensions",
+        muscule: "Legs",
         sets: 4,
-        weight:"50lb",
-        reps:"8-12",
-        tips:"Retract Your Scapula",
-        category:"upperbody, chest"
-    }
+        weight:"70lb",
+        reps:"10-12",
+        tips:"keep your lower body on the machine",
+        category:"lowerbody"   
+    },
 ]
 
 export default exercises;

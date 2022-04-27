@@ -21,7 +21,6 @@
 }
 
 .sidebar{
-  /* display: none; */
   position: fixed;
   transition: transform ease-in .4s;
   transform: translateX(100%);
@@ -29,15 +28,12 @@
   width: 0;
 }
 .sidebar-open{
-  /* display: block; */
   position: relative;
   transform: translate(0);
   width: 40vw;
   padding: 0 .50rem;
-  /* margin-right: .50rem; */
-  /* box-shadow: 10px 10px 10px 10px black; */
+
 } 
 .app-open{
-  /* border: 1px solid red; */
   display: flex;
 }

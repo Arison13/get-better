@@ -24,7 +24,7 @@ nav > a {
     border: 1px solid black;
     padding: .35rem .75rem;
     border-radius: 10px;
-    transition: .5s ease-in-out;
+    transition: .4s ease-in;
 }
 
 nav > a:hover {
