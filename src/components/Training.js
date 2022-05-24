@@ -9,6 +9,8 @@ export default function Training() {
   const [search, setSearch] = useState("");
   const [open, setOpen] = useState(false)
   
+
+  const LocalAPI = "http://localhost:9000/exercises";
   useEffect(()=> {
     // this would be a get call to the server in on order to set state to it everytime we render, or add changes to the API
     axios.get('https://get-better-be.herokuapp.com/exercises')
@@ -20,15 +22,14 @@ export default function Training() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const filteredExercises = data.filter(e => {
-      if(search.toLowerCase() === "all"){
-        return data;
-      }
-      else{ return e.muscule.toLowerCase() === search.toLowerCase();}
-    })
-    setData(filteredExercises)
+    axios.get(`https://get-better-be.herokuapp.com/exercises/${search}`)
+      .then(res => {
+        setData(res.data);
+      })
+      .catch(err => console.log({err}))
   }
 
+  
 
   return (
     <div>
