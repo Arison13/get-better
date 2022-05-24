@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import '../styles/AddExercise.css';
 import { FiX } from "react-icons/fi";
 import exercises from './data';
+import axios from 'axios';
 
 
 const initialFormValues = {
@@ -13,7 +14,7 @@ const initialFormValues = {
     tips:"",
 }
 export default function AddExercise({open, setOpen, data, setData}) {
-    const [formValues, setFormValues] = useState([initialFormValues])
+    const [formValues, setFormValues] = useState(initialFormValues)
 
     const handleOnChange = ev => {
         setFormValues({
@@ -25,7 +26,13 @@ export default function AddExercise({open, setOpen, data, setData}) {
     const onSubmit = ev => {
         ev.preventDefault();
         setOpen(false)  
-        // this would be a POST call to the backend server
+        axios.post('https://get-better-be.herokuapp.com/exercises', formValues)
+            .then(res => {
+                console.log(res)
+            })
+            .catch(err => {
+                console.log({err})
+            })
         exercises.push(formValues)
     }
 

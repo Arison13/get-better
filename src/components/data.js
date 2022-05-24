@@ -1,3 +1,4 @@
+
 const exercises = [
     {
         name:"Pull down",
@@ -67,3 +68,5 @@ const exercises = [
 ]
 
 export default exercises;
+
+

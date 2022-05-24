@@ -108,7 +108,7 @@
 
 @media only screen and (max-width: 425px){ 
     .dialog {
-        top:80%;
+        top:120%;
         width: 85%;
     }
     .modal-header > svg {

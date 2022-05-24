@@ -2,15 +2,25 @@ import React, { useState, useEffect } from 'react'
 import "../styles/Training.css";
 import exercises from './data'
 import AddExercise from './AddExercise';
+import axios from 'axios';
 
 export default function Training() {
   const [data, setData] = useState(exercises);
   const [search, setSearch] = useState("");
   const [open, setOpen] = useState(false)
+  
+  useEffect(()=> {
+    // this would be a get call to the server in on order to set state to it everytime we render, or add changes to the API
+    axios.get('https://get-better-be.herokuapp.com/exercises')
+    .then(res => { 
+      console.log('data coming back', res.data)
+      setData(res.data);
+    })
+  }, [])
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const filteredExercises = exercises.filter(e => {
+    const filteredExercises = data.filter(e => {
       if(search.toLowerCase() === "all"){
         return data;
       }
@@ -18,11 +28,7 @@ export default function Training() {
     })
     setData(filteredExercises)
   }
-  useEffect(()=> {
-    console.log('CHANGES IN DATA', exercises);
-    // this would be a get call to the server in on order to set state to it everytime we render, or add changes to the API
-    setData(exercises);
-  }, [exercises])
+
 
   return (
     <div>
