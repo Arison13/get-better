@@ -1,7 +1,7 @@
 import React from 'react'
-import '../styles/WeightLoss.css';
+import '../styles/Nutrition.css';
 
-export default function WeightLoss() {
+export default function Nutrition() {
 
   alert("The following page is not done yet, and it will continue to change for the upcoming days")
   return (

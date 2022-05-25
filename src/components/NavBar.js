@@ -10,7 +10,7 @@ export default function NavBar() {
           <nav> 
               <Link to='/home'>Home</Link>
               <Link to='/training'>Training</Link>
-              <Link to='/weight-loss'>Weight Loss</Link>
+              <Link to='/nutrition'>Nutrition</Link>
              
           </nav>
       </div>

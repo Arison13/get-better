@@ -4,7 +4,7 @@ import {FiX } from "react-icons/fi";
 import NavBar from './components/NavBar';
 import SideBar from './components/SideBar';
 import Training from './components/Training';
-import WeightLoss from './components/WeightLoss';
+import Nutrition from './components/Nutrition';
 import Home from './components/Home';
 import './App.css';
 
@@ -45,7 +45,7 @@ function App() {
               <Training/>
             </Route>
 
-            <Route path='/weight-loss' component={WeightLoss} />
+            <Route path='/nutrition' component={Nutrition} />
             <Route path="/home">
               <Home showSide={onClick}/>
             </Route>

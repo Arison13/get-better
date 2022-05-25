@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import '../styles/AddExercise.css';
 import { FiX } from "react-icons/fi";
-import exercises from './data';
 import axios from 'axios';
-
 
 const initialFormValues = {
     name:"",
@@ -27,13 +25,16 @@ export default function AddExercise({open, setOpen, data, setData}) {
         ev.preventDefault();
         setOpen(false)  
         axios.post('https://get-better-be.herokuapp.com/exercises', formValues)
-            .then(res => {
-                console.log(res)
+        // axios.post("http://localhost:9000/exercises", formValues)
+            .then(() => {
+                axios.get('https://get-better-be.herokuapp.com/exercises')
+                    .then(res => { 
+                    setData(res.data)
+                })
             })
             .catch(err => {
                 console.log({err})
             })
-        exercises.push(formValues)
     }
 
   return (
@@ -75,6 +76,3 @@ export default function AddExercise({open, setOpen, data, setData}) {
     </>
   )
 }
-
-
-// onFocusCapture={()=> alert('focus on dialog')}

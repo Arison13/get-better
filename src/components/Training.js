@@ -1,35 +1,33 @@
 import React, { useState, useEffect } from 'react'
 import "../styles/Training.css";
-import exercises from './data'
 import AddExercise from './AddExercise';
 import axios from 'axios';
 
 export default function Training() {
-  const [data, setData] = useState(exercises);
+  const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
   const [open, setOpen] = useState(false)
   
 
   const LocalAPI = "http://localhost:9000/exercises";
-  useEffect(()=> {
-    // this would be a get call to the server in on order to set state to it everytime we render, or add changes to the API
+  useEffect(()=> {    
     axios.get('https://get-better-be.herokuapp.com/exercises')
+    // axios.get(LocalAPI)
     .then(res => { 
-      console.log('data coming back', res.data)
+      // console.log('data coming back', res.data)
       setData(res.data);
     })
   }, [])
 
   const onSubmit = (e) => {
     e.preventDefault();
+    // axios.get(`${LocalAPI}/${search}`)
     axios.get(`https://get-better-be.herokuapp.com/exercises/${search}`)
       .then(res => {
         setData(res.data);
       })
       .catch(err => console.log({err}))
   }
-
-  
 
   return (
     <div>
@@ -60,7 +58,7 @@ export default function Training() {
       
       { open 
         ? 
-          <AddExercise open={open} setOpen={setOpen} data={data} setData={setData} /> 
+          <AddExercise open={open} setOpen={setOpen} setData={setData} /> 
         : 
           <div className='btn-div'>
             <button className='add-btn' onClick={()=> setOpen(true)}>Add Exercise </button>
